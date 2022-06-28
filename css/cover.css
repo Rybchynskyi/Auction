@@ -3,9 +3,9 @@
  */
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
+btn-shadow,
+btn-shadow:hover,
+btn-shadow:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
 }
