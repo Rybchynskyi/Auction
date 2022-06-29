@@ -3,13 +3,19 @@
 require_once 'config/connect.php';
 // header
 include 'header.php';
-include 'menu.php';
-?>
+$login_check = htmlspecialchars($_COOKIE["login"]);
+$password_check = htmlspecialchars($_COOKIE["password"]);
 
-<div class="container">
+// check user and password
+if ($login_check !== "All4Ukraine" or $password_check !== "qwerty") {
+ header('Location: ../auction/login.php');
+}
+?>
+<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <?php include 'menu.php'; ?>
     <div class="row">
         <div class="col-12">
-            <h1>Зроблені ставки</h1>
+            <h2 class="text-white mt-4 text-center">Зроблені ставки (панель адміністратора)</h2>
             <table class="table text-white">
                 <tr class="bg-white text-black">
                     <th>ID</th>
@@ -23,7 +29,7 @@ include 'menu.php';
 
                 <!-- list of bids-->
                 <?php
-                $bids_list = mysqli_query($connect,"SELECT * FROM `bid_list` ORDER BY bid_id ASC");
+                $bids_list = mysqli_query($connect,"SELECT * FROM `bid_list` ORDER BY bid_id DESC");
                 $bids_list = mysqli_fetch_all($bids_list);
                 foreach ($bids_list as $bids_item): ?>
 
@@ -45,47 +51,47 @@ include 'menu.php';
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i>  Добавити ставку</button>
         </div>
     </div>
-</div>
 
-<!-- make a new bid (modal window) -->
+    <!-- make a new bid (modal window) -->
 
-<div class="modal fade " id="create" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h5 class="modal-title">Добавити ставку</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
-            </div>
-            <div class="modal-body">
-                <form action="models/add.php" method="post" >
-                    <input type="hidden" class="form-control" name="page_from" value="bidlist"> <!-- for send page -->
-                    <div class="form-group mt-2">
-                        <small>Ставка (ціле число в гривні)</small>
-                        <input type="text" class="form-control" name="bid">
-                    </div>
-                    <div class="form-group mt-2">
-                        <small>Ім`я</small>
-                        <input type="text" class="form-control" name="name">
-                    </div>
-                    <div class="form-group mt-2 mb-4">
-                        <input type="checkbox" id="show_my_name" name="show_my_name" checked="checked"><small>   Показувати моє ім`я в історії платежів</small>
-                    </div>
-                    <hr>
-                    <h5 class="modal-title"><i class="fa-solid fa-id-card"></i>   Контактні дані</h5>
-                    <small>Вони нам потрібні щоб ми могли зв`язатися з Вами якщо Ви виграєте аукціон</small>
-                    <div class="form-group mt-2">
-                        <small>Email</small>
-                        <input type="text" class="form-control" name="email">
-                    </div>
-                    <div class="form-group mt-2">
-                        <small>Телефон:</small>
-                        <input type="text" class="form-control" name="phone">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
-                        <button type="submit" class="btn btn-primary" name="add">Добавити ставку</button>
-                    </div>
-                </form>
+    <div class="modal fade " id="create" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title">Добавити ставку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="models/add.php" method="post" >
+                        <input type="hidden" class="form-control" name="page_from" value="bidlist"> <!-- for send page -->
+                        <div class="form-group mt-2">
+                            <small>Ставка (ціле число в гривні)</small>
+                            <input type="text" class="form-control" name="bid">
+                        </div>
+                        <div class="form-group mt-2">
+                            <small>Ім`я</small>
+                            <input type="text" class="form-control" name="name">
+                        </div>
+                        <div class="form-group mt-2 mb-4">
+                            <input type="checkbox" id="show_my_name" name="show_my_name" checked="checked"><small>   Показувати моє ім`я в історії платежів</small>
+                        </div>
+                        <hr>
+                        <h5 class="modal-title"><i class="fa-solid fa-id-card"></i>   Контактні дані</h5>
+                        <small>Вони нам потрібні щоб ми могли зв`язатися з Вами якщо Ви виграєте аукціон</small>
+                        <div class="form-group mt-2">
+                            <small>Email</small>
+                            <input type="text" class="form-control" name="email">
+                        </div>
+                        <div class="form-group mt-2">
+                            <small>Телефон:</small>
+                            <input type="text" class="form-control" name="phone">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                            <button type="submit" class="btn btn-primary" name="add">Добавити ставку</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

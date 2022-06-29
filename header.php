@@ -9,5 +9,5 @@
     <link rel="stylesheet" href="css/cover.css">
 </head>
 <body class="d-flex h-100 bg-dark">
-<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column ">
 
