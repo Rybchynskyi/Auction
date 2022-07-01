@@ -2,6 +2,24 @@
     height: 100vh;
 }
 
+.text-yellow {
+    color: #fff600
+}
+
+.first-part {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.lang-select {
+    width: 66px;
+    margin-left: 10px;
+}
+
+.lang-select.currency {
+    width: 80px;
+}
+
 ul.timeline {
     list-style-type: none;
     position: relative;

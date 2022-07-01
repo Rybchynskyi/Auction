@@ -10,7 +10,11 @@
 ?>
 
 <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-<?php include 'menu.php'; ?>
+
+<?php
+    $menuitem = "history";
+    include 'menu.php';
+?>
 <div class="container mt-5 mb-5">
     <div class="row text-white text-center">
         <h2>Історія ставок станом на <?=date("d.m, g:i a");?></h2>

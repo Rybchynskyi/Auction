@@ -1,35 +1,47 @@
 <?php
 
-// DB connect
-require_once 'config/connect.php';
+    // DB connect
+    require_once 'config/connect.php';
 
-// SQL Query`s
-$max_bid = mysqli_query($connect, "SELECT MAX(Bid) FROM bid_list");
-$max_bid = mysqli_fetch_array($max_bid);
+    // SQL Query`s
+    $max_bid = mysqli_query($connect, "SELECT MAX(Bid) FROM bid_list");
+    $max_bid = mysqli_fetch_array($max_bid);
 
-$num_bids = mysqli_query($connect, "SELECT COUNT(*) FROM bid_list");
-$num_bids = mysqli_fetch_array($num_bids);
+    $num_bids = mysqli_query($connect, "SELECT COUNT(*) FROM bid_list");
+    $num_bids = mysqli_fetch_array($num_bids);
 
-$bids_history = mysqli_query($connect, "SELECT * FROM bid_list ORDER BY bid_id DESC LIMIT 7");
-$bids_history = mysqli_fetch_all($bids_history);
+    $bids_history = mysqli_query($connect, "SELECT * FROM bid_list ORDER BY bid_id DESC LIMIT 7");
+    $bids_history = mysqli_fetch_all($bids_history);
 
-include 'header.php';
+    // add header
+    include 'header.php';
 
+    //add container
+    echo '<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">';
 
-$var = $num_bids["COUNT(*)"];
-$bid_word = ($var > 4) ? "ставок" : "ставки";
+    //add menu and active page
+    include 'menu.php';
+
+    // language selector
+    require "models/language_list.php";
+    $lang = "$" . $_COOKIE["lang"];
+    $lang = $_COOKIE["lang"] === 'en' ? $en : $ua;
+
+    // bid or bidS
+    $var = $num_bids["COUNT(*)"];
+    $bid_word = ($var > 4) ? $lang['bids'] : $lang['bid'];
+
 ?>
 
-    <?php include 'menu.php'; ?>
+    <?php require_once 'menu.php'; ?>
     <div class="row d-flex align-items-center justify-content-center my-4">
-        <div class="col-sm-7">
+        <div class="col-sm-7 first-part">
             <div class="px-3">
-                <h1 class="text-white mt-4">Розігруємо славнозвісну марку з підписом автора</h1><br>
-                <h5 class="lead text-white pb-4">Прийміть участь у благодійному аукціоні. Допоможіть ЗСУ і отримайте марку з підписом автора славнозвісної фрази. Всі отримані кошти підуть на покупку реанімобіля для медичної служби військової частини А7030. </h5>
-                <h3 class="text-white my-4">Максимальна ставка:   <? echo number_format( $max_bid["MAX(Bid)"], 0, ',', ' ' ); ?> грн.</h3>
-                <h3 class="text-white my-4">Благодійний аукціон закінчується через: <p id="timer"></p></h3>
+                <h1 class="text-white mt-4"><?= $lang['site_title_1']?></h1><br>
+                <h5 class="lead text-white pb-4"><?= $lang['site_title_2']?></h5>
+                <h3 class="text-white my-4"><?= $lang['max_bid']?><? echo number_format( $max_bid["MAX(Bid)"], 0, ',', ' ' ); ?> <?= $lang['currency']?></h3>
                 <p class="lead">
-                    <button type="button" class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i>  Підняти ставку</button>
+                    <button type="button" class="btn btn-success btn-shadow  my-4" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
                 </p>
             </div>
         </div>
@@ -46,19 +58,21 @@ $bid_word = ($var > 4) ? "ставок" : "ставки";
 
     <div class="row">
         <div class="col-md-6 offset-md-3">
-                <h1 class="text-center text-white my-4"><? echo $num_bids["COUNT(*)"]; ?> <?=$bid_word?> вже зроблено!</h1>
-            <div class="text-center "><button type="button" class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i>  Підняти ставку</button></div>
+            <h1 class="text-center text-white my-4"><? echo $num_bids["COUNT(*)"]; ?> <?=$bid_word?><?= $lang['bids_quont']?></h1>
+            <h5 class="text-center text-white"><?= $lang['timer_1']?></h5><h1 class="text-center text-yellow"><span id="days_left"></span><?= $lang['timer_2']?><span id="timer"></span></h1>
+
+            <div class="text-center  my-4"><button type="button" class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button></div>
             <ul class="timeline">
                 <?php foreach ($bids_history as $one_bid): ?>
                 <li class="text-white mb-4">
-                    <h1><?=$one_bid[2] ?> грн.</h1>
-                    <p>Добродій <?php $status=($one_bid[6] == 'on') ? $one_bid[1] : "(прихований)"; echo $status?> підвищив ставку станом на: <?=$one_bid[3] ?></p>
+                    <h1><?=$one_bid[2] ?> <?= $lang['currency']?></h1>
+                    <p><?= $lang['history_1']?><?php $status=($one_bid[6] == 'on') ? $one_bid[1] : $lang['hide']; echo $status?><?= $lang['history_2']?><?=$one_bid[3] ?></p>
                 </li>
                 <?php endforeach; ?>
             </ul>
         </div>
         <div class="row text-center mt-3">
-            <a href="bidhistory.php"><button type="button" class="btn btn-warning">Переглянути всі ставки</button></a>
+            <a href="bidhistory.php"><button type="button" class="btn btn-warning"><?= $lang['show_all']?></button></a>
         </div>
     </div>
 
@@ -67,11 +81,8 @@ $bid_word = ($var > 4) ? "ставок" : "ставки";
             <img src="img/car.png" class="rounded mx-auto d-block img-fluid my-4" alt="...">
         </div>
         <div class="col-sm">
-            <h3 class="text-white my-4">Всі кошти від благодійного аукціону будуть переразовані на реаніиобіль для медичної служби військової частини А7030 🙏 ❤️.</h3>
-            <h5 class="text-white">Щодня російська орда ранить та вбиває сотні наших співвітчизників.</h5>
-            <h5 class="text-white">Медична служба рятує не лише військових, а і місцевих жителів.</h5>
-            <h5 class="text-white">Своєчасна евакуація з поля бою та надання першої медичної допомоги рятує життя.</h5>
-            <h5 class="text-white">Медики – це ангели охоронці наших хлопців на полі бою.</h5>
+            <h3 class="text-white my-4"><?= $lang['for_what_1']?></h3>
+            <h5 class="text-white"><?= $lang['for_what_2']?></h5>
         </div>
     </div>
 

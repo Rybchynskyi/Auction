@@ -1,18 +1,28 @@
 <?php
-// DB connect
-require_once 'config/connect.php';
-// header
-include 'header.php';
-$login_check = htmlspecialchars($_COOKIE["login"]);
-$password_check = htmlspecialchars($_COOKIE["password"]);
 
-// check user and password
-if ($login_check !== "All4Ukraine" or $password_check !== "qwerty") {
- header('Location: ../auction/login.php');
-}
-?>
-<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <?php include 'menu.php'; ?>
+    // get authentification from cookies
+    $login_check = htmlspecialchars($_COOKIE["login"]);
+    $password_check = htmlspecialchars($_COOKIE["password"]);
+
+    // check user and password
+    if ($login_check !== "All4Ukraine" or $password_check !== "qwerty") {
+        header('Location: ../auction/login.php'); exit;
+    }
+    else echo "";
+
+    // DB connect
+        require_once 'config/connect.php';
+
+        // add header
+        include 'header.php';
+
+        //add container
+        echo '<div class="container d-flex w-100 p-3 mx-auto flex-column">';
+
+        //add menu
+        include 'menu.php';
+    ?>
+
     <div class="row">
         <div class="col-12">
             <h2 class="text-white mt-4 text-center">Зроблені ставки (панель адміністратора)</h2>
@@ -97,5 +107,5 @@ if ($login_check !== "All4Ukraine" or $password_check !== "qwerty") {
     </div>
 </div>
 
-
+// add footer
 <?php include 'footer.php' ?>
