@@ -16,6 +16,6 @@
         header('Location: ../bidlist.php');
     }
     else {
-        header('Location: ../index.php');
+        header('Location: ../contacts.php');
     }
 ?>

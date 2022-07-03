@@ -2,26 +2,50 @@
     date_default_timezone_set('Europe/Kiev');
     require_once '../config/connect.php';
 
-    $bid = $_POST['bid'];
-    $bids_name = $_POST['name'];
-    $bids_contact = $_POST['email'];
-    $bids_phone = $_POST['phone'];
-    $show_bids_name = $_POST['show_my_name'];
-    $bids_time = date("Y-m-d H:i:s");
-    $pagefrom = $_POST['page_from'];
 
-    setcookie("name", $bids_name, time() + 14 * 86400, "/auction/auction");
-    setcookie("email", $bids_contact, time() + 14 * 86400, "/auction/auction");
-    setcookie("phone", $bids_phone, time() + 14 * 86400, "/auction/auction");
+// take currency
+$currency = mysqli_query($connect,"SELECT `currency` FROM `currency`");
+$currency = mysqli_fetch_array($currency);
+$currency = $currency['currency'];
 
-    mysqli_query($connect, "INSERT INTO `bid_list` (`bid_id`,`name`, `bid`, `bid_time`, `bid_contact`, `bid_phone`, `show_my_name`) VALUES (NULL, '$bids_name', '$bid', '$bids_time', '$bids_contact', '$bids_phone', '$show_bids_name')");
+// change bid to UAH
+if ($_COOKIE["lang"] === 'en') {
+    $bid = (float)$_POST['bid'] * $currency;
+}
+else {
+    $bid = (float)$_POST['bid'];
+}
+
+// SQL get MAX-BID
+$max_bid = mysqli_query($connect, "SELECT MAX(Bid) FROM bid_list");
+$max_bid = mysqli_fetch_array($max_bid);
+$max_bid = $max_bid["MAX(Bid)"];
+
+// Bid info
+$bids_name = $_POST['name'];
+$bids_contact = $_POST['email'];
+$bids_phone = $_POST['phone'];
+$show_bids_name = $_POST['show_my_name'];
+$bids_time = date("Y-m-d H:i:s");
+$pagefrom = $_POST['page_from'];
 
 
+// setcookie
+setcookie("name", $bids_name, time() + 14 * 86400, "/");
+setcookie("email", $bids_contact, time() + 14 * 86400, "/");
+setcookie("phone", $bids_phone, time() + 14 * 86400, "/");
 
-    if ($pagefrom == "bidlist") {
-        header('Location: ../bidlist.php');
+    if ($bid >$max_bid) {
+        mysqli_query($connect, "INSERT INTO `bid_list` (`bid_id`,`name`, `bid`, `bid_time`, `bid_contact`, `bid_phone`, `show_my_name`) VALUES (NULL, '$bids_name', '$bid', '$bids_time', '$bids_contact', '$bids_phone', '$show_bids_name')");
+        $bid_ua = number_format($bid, 2, ',', ' ' );
+        $bid_en = number_format($bid / $currency, 2, ',', ' ' );
+
+        $message = "Добродій " . $bids_name . " підвищив ставку до: " . $bid_ua . " грн. %0A %0A" . $bids_name . " raised the rate to: " . $bid_en . "$";
+        $telegram_send = fopen("https://api.telegram.org/bot5430503074:AAHdewxbqqwDt_03y-IwNRvDK5ARkIaNtVY/sendMessage?chat_id=-678534217&text=$message", "r");
+        header('Location: ../'.$pagefrom.'.php?info=success');
     }
+
     else {
-        header('Location: ../index.php');
+        header('Location: ../index.php?info=failed');
     }
 ?>
