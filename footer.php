@@ -2,21 +2,20 @@
     <div class="row text-white">
         <div class="col-sm-6">
             <img class="rounded" style="width: 200px; float: left; margin-right: 10px" src="img/FBall4.png">
-            <p>Благодійний аукціон був розроблений за підтримки волонтерської органіації All4Ukraine.</p>
-            <p>Всі права захищені</p>
+            <h6><small><?= $lang['copyright']?></small></h6>
+            <h6><small><?= $lang['all_rules']?></small></h6>
         </div>
         <div class="col-sm-3">
             <ul>
-                <li><a href="" class="text-white">Умови участі</a></li>
-                <li><a href="" class="text-white">Історія ставок</a></li>
-                <li><a href="" class="text-white">Запропонувати лот</a></li>
-                <li><a href="" class="text-white">Контакти</a></li>
+                <li><a href="conditions.php" class="text-white"><?= $lang['menu_conditions']?></a></li>
+                <li><a href="bidhistory.php" class="text-white"><?= $lang['menu_history']?></a></li>
+                <li><a href="contacts.php" class="text-white"><?= $lang['menu_contacts']?></a></li>
             </ul>
         </div>
         <div class="col-sm-3 text-end">
             <a href="tel:0979563613" class="text-white">+38 (097) 956 36 13</a><br>
             <a href="https://www.all4ukraine.org/" class="text-white">https://www.all4ukraine.org/</a><br>
-            <a href="https://www.facebook.com/all4ukraineua" class="text-white">Наша сторінка Facebook</a>
+            <a href="https://www.facebook.com/all4ukraineua" class="text-white"><?= $lang['FBpage']?></a>
         </div>
     </div>
 </div>

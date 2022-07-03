@@ -32,12 +32,12 @@ $max_bid = mysqli_fetch_array($max_bid);
 $max_bid = $max_bid["MAX(Bid)"];
 
 // Bid info from post
-$bids_name = $_POST['name'];
-$bids_contact = $_POST['email'];
-$bids_phone = $_POST['phone'];
-$show_bids_name = $_POST['show_my_name'];
+$bids_name = htmlspecialchars($_POST['name']);
+$bids_contact = htmlspecialchars($_POST['email']);
+$bids_phone = htmlspecialchars($_POST['phone']);
+$show_bids_name = htmlspecialchars($_POST['show_my_name']);
 $bids_time = date("Y-m-d H:i:s");
-$pagefrom = $_POST['page_from'];
+$pagefrom = htmlspecialchars($_POST['page_from']);
 
 
 // setcookie

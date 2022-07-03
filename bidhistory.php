@@ -5,6 +5,11 @@
     // DB connect
     require_once 'config/connect.php';
 
+    // Menu
+    $menuitem = "history";
+    include 'menu.php';
+
+
     $bids_history = mysqli_query($connect, "SELECT * FROM bid_list ORDER BY bid_id DESC");
     $bids_history = mysqli_fetch_all($bids_history);
 
@@ -13,43 +18,47 @@
     $max_bid = mysqli_fetch_array($max_bid);
     $max_bid = $max_bid["MAX(Bid)"];
 
-    if (isset($_COOKIE["lang"]) and $_COOKIE["lang"] === 'en') {
+    //take currency
+    $currency = mysqli_query($connect,"SELECT `currency` FROM `currency`");
+    $currency = mysqli_fetch_array($currency);
+    $currency = $currency['currency'];
+
+// Max bid for USD
+    if ($lang === 'en') {
         $max_bid = $max_bid / $currency;
     }
-    else {
-        $max_bid = $max_bid;
-    }
 
-    // language selector
-    require "models/language_list.php";
-    $lang = "$" . $_COOKIE["lang"];
-    $lang = $_COOKIE["lang"] === 'en' ? $en : $ua;
 ?>
 
-<?php
-    $menuitem = "history";
-    include 'menu.php';
-?>
+
 <div class="mt-5 mb-5">
     <div class="row text-white text-center">
-        <h2>Історія ставок станом на <?=date("d.m, g:i a");?></h2>
+        <h2><?= $lang['bid_history']?><?=date("d.m, g:i a");?></h2>
     </div>
     <div class="row text-center mt-3">
-        <button type="button" class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i>  Підняти ставку</button>
+        <button type="button" class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
     </div>
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <h4>Latest News</h4>
             <ul class="timeline">
                 <?php foreach ($bids_history as $one_bid): ?>
-                <li class="text-white mb-4">
-                    <h1><?=$one_bid[2] ?> грн.</h1>
-                    <p>Добродій <?php $status=($one_bid[6] == 'on') ? $one_bid[1] : "(прихований)"; echo $status?> підвищив ставку станом на: <?=$one_bid[3] ?></p>
-                </li>
+                    <li class="text-white mb-4">
+                        <h1><?php
+                            if (isset($_COOKIE["lang"]) and $_COOKIE["lang"] === 'en') {
+                                echo number_format($one_bid[2] / $currency, 2, ',', ' ' );
+                            }
+                            else {
+                                echo number_format($one_bid[2], 2, ',', ' ' );
+                            };
+                            ?> <?= $lang['currency']?></h1>
+                        <p><?= $lang['history_1']?><?php $status=($one_bid[6] == 'on') ? $one_bid[1] : $lang['hide']; echo $status?><?= $lang['history_2']?><?=$one_bid[3] ?></p>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </div>
     </div>
+
 
 
     <!-- make a new bid (modal window) -->
@@ -63,7 +72,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="models/add.php" method="post" >
-                        <input type="hidden" class="form-control" name="page_from" value="index"> <!-- for send page -->
+                        <input type="hidden" class="form-control" name="page_from" value="bidhistory"> <!-- for send page -->
                         <div class="form-floating mt-2">
                             <input type="number" min="<?= sprintf('%0.2f', $max_bid) + 0.01 ?>" class="form-control" id="floatingBid" name="bid" required placeholder="example"  step="0.01">
                             <label for="floatingBid"><?= $lang['add_bill_amount']?></label>

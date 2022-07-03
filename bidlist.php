@@ -6,7 +6,7 @@
 
     // check user and password
     if ($login_check !== "All4Ukraine" or $password_check !== "qwerty") {
-        header('Location: ../login.php'); exit;
+        header('Location: login.php'); exit;
     }
     else echo "";
 
@@ -76,50 +76,6 @@
         </div>
     </div>
 
-    <!-- make a new bid (modal window) -->
-
-    <div class="modal fade " id="create" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h5 class="modal-title">Добавити ставку</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="models/add.php" method="post" >
-                        <input type="hidden" class="form-control" name="page_from" value="bidlist"> <!-- for send page -->
-                        <div class="form-group mt-2">
-                            <small>Ставка (ціле число в гривні)</small>
-                            <input type="text" class="form-control" name="bid">
-                        </div>
-                        <div class="form-group mt-2">
-                            <small>Ім`я</small>
-                            <input type="text" class="form-control" name="name">
-                        </div>
-                        <div class="form-group mt-2 mb-4">
-                            <input type="checkbox" id="show_my_name" name="show_my_name" checked="checked"><small>   Показувати моє ім`я в історії платежів</small>
-                        </div>
-                        <hr>
-                        <h5 class="modal-title"><i class="fa-solid fa-id-card"></i>   Контактні дані</h5>
-                        <small>Вони нам потрібні щоб ми могли зв`язатися з Вами якщо Ви виграєте аукціон</small>
-                        <div class="form-group mt-2">
-                            <small>Email</small>
-                            <input type="text" class="form-control" name="email">
-                        </div>
-                        <div class="form-group mt-2">
-                            <small>Телефон:</small>
-                            <input type="text" class="form-control" name="phone">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
-                            <button type="submit" class="btn btn-primary" name="add">Добавити ставку</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 // add footer
 <?php include 'footer.php' ?>

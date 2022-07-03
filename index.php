@@ -13,14 +13,6 @@ $max_bid = mysqli_query($connect, "SELECT MAX(Bid) FROM bid_list");
 $max_bid = mysqli_fetch_array($max_bid);
 $max_bid = $max_bid["MAX(Bid)"];
 
-function get_user_lang () {
-    return isset($_COOKIE["lang"]) ? $_COOKIE["lang"] :'ua';
-}
-
-if (get_user_lang() === 'en') {
-    $max_bid = $max_bid / $currency;
-}
-
 
 
 $num_bids = mysqli_query($connect, "SELECT COUNT(*) FROM bid_list");
@@ -37,9 +29,10 @@ include 'header.php';
 //add menu and active page
 include 'menu.php';
 
-// language selector
-require "models/language_list.php";
-$lang = get_user_lang() === 'en' ? $en : $ua;
+// Max bid for USD
+if (get_user_lang() === 'en') {
+    $max_bid = $max_bid / $currency;
+}
 
 // bid or bidS
 $var = $num_bids["COUNT(*)"];
@@ -112,10 +105,10 @@ elseif ($info == "err_nobid") {
 
 <div class="row newblock subіcribe d-flex align-items-center justify-content-center">
     <div class="col-sm-9 my-4 ">
-        <h2 class="text-white text-center ">Підпишіться на наш телеграм-канал щоб<br>миттєво отримувати інформацію по ставкам</h2>
+        <h3 class="text-white text-center "><?= $lang['telegram']?></h3>
     </div>
     <div class="col-sm-3 my-4 text-center">
-        <a href="https://t.me/arybchik123"><button type="button" class="btn btn btn-primary btn-shadow btn-lg" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-brands fa-telegram fa-xl"></i><?= $lang['subscribe']?></button></a>
+        <a href="https://t.me/all4ukraineua"><button type="button" class="btn btn btn-primary btn-shadow btn-lg" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-brands fa-telegram fa-xl"></i><?= $lang['subscribe']?></button></a>
     </div>
 </div>
 
@@ -123,9 +116,9 @@ elseif ($info == "err_nobid") {
     <div class="col-sm">
         <img src="img/car.png" class="rounded mx-auto d-block img-fluid my-4" alt="...">
     </div>
-    <div class="col-sm">
-        <h3 class="text-white my-4"><?= $lang['for_what_1']?></h3>
-        <h5 class="text-white"><?= $lang['for_what_2']?></h5>
+    <div class="col-sm text-white">
+        <h4 class="my-4"><?= $lang['for_what_1']?></h4>
+        <p><?= $lang['for_what_2']?></p>
     </div>
 </div>
 
@@ -172,10 +165,6 @@ elseif ($info == "err_nobid") {
         </div>
     </div>
 </div>
-
-
-
-
 
 
 
