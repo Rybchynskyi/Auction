@@ -2,8 +2,10 @@
 
     $ua = array(
         'bid_sucess' => "Ставка прийнята успішно",
+        'bid_failed' => "Ваша ставка нижча за актуальну",
         'site_title_1' => "Розігруємо славнозвісну марку з підписом автора",
-        'site_title_2' => "Прийміть участь у благодійному аукціоні. Допоможіть ЗСУ і отримайте марку з підписом автора славнозвісної фрази. Всі отримані кошти підуть на покупку реанімобіля для медичної служби військової частини А7030.",
+        'site_title_2' => "Прийміть участь у благодійному аукціоні. Допоможіть ЗСУ і отримайте марку з підписом автора славнозвісної фрази. Всі отримані кошти підуть на покупку",
+        'site_title_3' => "реанімобіля для медичної служби військової частини А7030.",
         'max_bid' => "Максимальна ставка: ",
         'make_a_bid' => "  Підняти ставку",
         'bid' => "ставки",
@@ -29,13 +31,16 @@
         'add_bill_contact_2' => "Для зв`язку з Вами якщо Ви виграєте аукціон",
         'add_bill_phone' => "Телефон:",
         'add_bill_close' => "Закрити",
+        'subscribe' => "  Підписатись",
 
 
     );
     $en = array(
         'bid_sucess' => "The bet was accepted successfully",
+        'bid_failed' => "Your rate is lower than the current rate",
         'site_title_1' => "We are raffling off a famous stamp with the author's signature",
-        'site_title_2' => "Take part in a charity auction. Help the Armed Forces and get a stamp with the signature of the author of the famous phrase. All funds received will go towards the purchase of an ambulance for the medical service of the A7030 military unit.",
+        'site_title_2' => "Take part in a charity auction. Help the Armed Forces and get a stamp with the signature of the author of the famous phrase. All funds received will go towards the purchase of an",
+        'site_title_3' => "ambulance for the medical service of the A7030 military unit.",
         'max_bid' => "Maximum rate: ",
         'make_a_bid' => "  Raise the rate",
         'bid' => "bid",
@@ -61,5 +66,6 @@
         'add_bill_contact_2' => "To contact you if you win the auction",
         'add_bill_phone' => "Phone:",
         'add_bill_close' => "Close",
+        'subscribe' => "  Subscribe"
     );
 ?>

@@ -1,3 +1,26 @@
+.textbrand {
+    font-size: xx-large;
+}
+
+.subіcribe {
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.newblock {
+    margin-top: 100px;
+}
+
+.link {
+    color: white;
+}
+.link:visited {
+    color: white;
+}
+.link:hover {
+    color: yellow;
+}
+
 nav {
     padding: .25rem 0;
     font-weight: 700;
@@ -20,7 +43,7 @@ nav {
     color: #fff600
 }
 
-.first-part {
+.block-center {
     margin-top: 60px;
     margin-bottom: 60px;
 }

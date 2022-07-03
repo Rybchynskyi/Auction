@@ -7,5 +7,6 @@
     include 'menu.php';
 ?>
 
+
 // add footer
 <?php include 'footer.php' ?>

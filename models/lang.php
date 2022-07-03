@@ -1,7 +1,7 @@
 <?php
     $lang = $_GET["lang"];
 
-    setcookie("lang", $lang, time() + 14 * 86400, "/auction/auction");
+    setcookie("lang", $lang, time() + 14 * 86400, "/");
 
-    header('Location: ../contacts.php');
+    header('Location: ../index.php');
 ?>
