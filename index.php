@@ -1,6 +1,6 @@
 <?php
 
-    // DB connect
+    // DB connectе
     require_once 'config/connect.php';
 
     //take currency
