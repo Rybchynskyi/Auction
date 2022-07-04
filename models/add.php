@@ -32,15 +32,35 @@ $max_bid = mysqli_fetch_array($max_bid);
 $max_bid = $max_bid["MAX(Bid)"];
 
 // Bid info from post
-$bids_name = htmlspecialchars($_POST['name']);
-
 
 $bids_contact = htmlspecialchars($_POST['email']);
 $bids_phone = htmlspecialchars($_POST['phone']);
-$show_bids_name = htmlspecialchars($_POST['show_my_name']);
 $bids_time = date("Y-m-d H:i:s");
 $pagefrom = htmlspecialchars($_POST['page_from']);
 
+// show bid`s name
+$bids_name = htmlspecialchars($_POST['name']);
+
+if (isset($_POST['show_my_name'])) {
+    $show_bids_name = $_POST['show_my_name'];
+}
+else {
+    $show_bids_name = null;
+}
+
+if (isset($_POST['show_my_name'])) {
+    $status_name_ua = $bids_name;
+}
+else {
+    $status_name_ua = "(прихований)";
+}
+
+if (isset($_POST['show_my_name'])) {
+    $status_name_en = $bids_name;
+}
+else {
+    $status_name_en = "(hide)";
+}
 
 // setcookie
 setcookie("name", $bids_name, time() + 14 * 86400, "/");
@@ -53,11 +73,14 @@ if ($bid >$max_bid) {
     /// for teleg
     $bid_ua = number_format($bid, 2, ',', ' ' );
     $bid_en = number_format($bid / $currency, 2, ',', ' ' );
-    $message = "Добродій " . $bids_name . " підвищив ставку до: " . $bid_ua . " грн. %0A %0A" . $bids_name . " raised the rate to: " . $bid_en . "$";
+    $message = "Добродій " . $status_name_ua . " підвищив ставку до: " . $bid_ua . " грн. %0A %0A" . $status_name_en . " raised the rate to: " . $bid_en . "$";
     //send to our public group
     //$telegram_send = fopen("https://api.telegram.org/bot5430503074:AAHdewxbqqwDt_03y-IwNRvDK5ARkIaNtVY/sendMessage?chat_id=-1001514220516&text=$message", "r");
     //send to our private group
     //$telegram_send = fopen("https://api.telegram.org/bot5476468086:AAHGcMnLexL9eSPgAtsjYuElYzPkm75R6RA/sendMessage?chat_id=-678534217&text=$message", "r");
+    // backup log to file
+    file_put_contents('log.txt', $bids_time . " " . $bids_name . " " . $bid_ua . " " . $bids_contact . " " . $bids_phone . " " . $show_bids_name . "\r\n", FILE_APPEND);
+    // go to the previous page
     header('Location: ../'.$pagefrom.'.php?info=success');
 }
 

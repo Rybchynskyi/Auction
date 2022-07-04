@@ -13,15 +13,13 @@ $max_bid = mysqli_query($connect, "SELECT MAX(Bid) FROM bid_list");
 $max_bid = mysqli_fetch_array($max_bid);
 $max_bid = $max_bid["MAX(Bid)"];
 
-
 // SQL define quantity of bids
 $num_bids = mysqli_query($connect, "SELECT COUNT(*) FROM bid_list");
 $num_bids = mysqli_fetch_array($num_bids);
 
+// SQL define bids history
 $bids_history = mysqli_query($connect, "SELECT * FROM bid_list ORDER BY bid_id DESC LIMIT 7");
 $bids_history = mysqli_fetch_all($bids_history);
-
-
 
 // add header
 include 'header.php';
@@ -76,7 +74,7 @@ elseif ($info == "err_nobid") {
 
 <div class="row">
     <div class="col-md-6 offset-md-3">
-        <h1 class="text-center text-white my-4"><? echo $num_bids["COUNT(*)"]; ?> <?=$bid_word?><?= $lang['bids_quont']?></h1>
+        <h1 class="text-center text-white my-4"><?= $num_bids["COUNT(*)"]; ?> <?=$bid_word?><?= $lang['bids_quont']?></h1>
 
         <div class="text-center  my-4"><button type="button" class="btn btn-success  btn-lg btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button></div>
         <div class="text-left mt-4">
