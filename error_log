@@ -1,2 +1,0 @@
-[03-Jul-2022 06:52:27 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/allukra1/bid.all4ukraine.org/config/connect.php on line 9
-[03-Jul-2022 06:52:34 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/allukra1/bid.all4ukraine.org/config/connect.php on line 9
