@@ -14,7 +14,7 @@ $max_bid = mysqli_fetch_array($max_bid);
 $max_bid = $max_bid["MAX(Bid)"];
 
 
-
+// SQL define quantity of bids
 $num_bids = mysqli_query($connect, "SELECT COUNT(*) FROM bid_list");
 $num_bids = mysqli_fetch_array($num_bids);
 
