@@ -1,7 +1,8 @@
 <?php
 
     $ua = array(
-        'bid_sucess' => 'Ставка прийнята успішно. <strong><a href="https://t.me/all4ukraineua">Наш Telegram-бот</a></strong> інформує про підвищення ставки',
+        'bid_sucess1' => 'Ставка прийнята успішно 👏',
+        'bid_sucess2' => 'Підписуйтесь на наш <strong><a href="https://t.me/all4ukraineua">Telegram-бот</a></strong> щоб отримувати оперативну інформацію про підвищення ставки',
         'bid_failed' => "Ваша ставка нижча за актуальну",
         'site_title_1' => "Розігруємо ексклюзивну гільзу від “Гвоздики”",
         'site_title_2' => "<p>Вона дуже влучно відпрацювала по окупантам у травні 2022 року.  💪💙💛</p><p>Гільза, передана нашими героями - це чудовий сувенір, який в майбутньому залишиться у вас, як символ нашої Перемоги.</p><p>Вилучені кошти з аукціону будуть залучені на ",
@@ -19,7 +20,10 @@
         'history_2' => " підвищив ставку станом на: ",
         'show_all' => "Переглянути всі ставки",
         'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на покупку пікапа героям з 58 бригади",
-        'for_what_2' => "<p>Волонтерська організація відкрила збір коштів на пікап 2 липня. Проте за день було зібрано коштів на одне колесо. Ми розуміємо, що такими темпами заявка буде закрита в кращому випадку через місяць.</p><p>Тому для прискорення збору коштів ми розігруємо унікальний прапор України, на якому для нас підписався Роман Грибов. Саме цей військовий разом з побратимами відправили рашистський корабель і усю росію у відомому напрямку.</p>",
+        'for_what_2' => "<p>Друзі, нагадуємо вам, що українським бійцям з 58 бригади, що зараз тримають оборону нашої Донеччини, ТЕРМІНОВО потрібен ПІКАП.</p>
+                        <p>Ми продовжуємо збір на авто для хлопців і дуже просимо вас приєднуватися до нас ❤️🙏.</p>
+                        <p>Адже саме з допомогою такої машини можна зробити безліч неприємностей оркам у наших українських степах.</p>
+                        <p>Пікапи надзвичайно функціональні та всюдихідні! Можуть перевезти особовий склад, забрати з поля бою поранених, доставити боєкомплект на позицію, а також їх можна перетворити на озброєний кошмар для окупантів.</p>",
         'bid_history' => "Історія ставок станом на ",
         'footer_1' => "Платформа для благодійного аукціону була розроблена за підтримки волонтерської організації All4Ukraine.",
         'footer_2' => "Всі права захищені",
@@ -59,7 +63,8 @@
 
     );
     $en = array(
-        'bid_sucess' => 'Bid accepted successfully <strong><a href="https://t.me/all4ukraineua">Our Telegram bot</a></strong> informs about increased rate',
+        'bid_sucess1' => 'Bid accepted successfully 👏',
+        'bid_sucess2' => 'Subscribe to our <strong><a href="https://t.me/all4ukraineua">Telegram bot</a></strong> to receive instant information about raising the rate',
         'bid_failed' => "Your bid is lower than expected",
         'site_title_1' => "You placing bids for an exclusive sleeve from “Gvozdyka“",
         'site_title_2' => "<p>She worked very well against the occupiers in May 2022. 💪💙💛 </p><p>Shell given by our heroes will become a great souvenir that in the future will be the symbol of our Victory. 
@@ -75,10 +80,13 @@
         'currency' => "USD",
         'history_1' => "",
         'hide' => "(hidden)",
-        'history_2' => "increased rate as of:",
+        'history_2' => " increased rate as of:",
         'show_all' => "View all bids",
         'for_what_1' => "All the funds received from the auction will be given for the purchase of a pickup truck for the 58th brigade",
-        'for_what_2' => "<p>The non profit charity organization opened a fundraiser for a pickup truck on July 2. However, funds were collected for only one wheel in whole day. We understand that at this rate the application will be closed in a month at best.</p><p>Therefore, in order to speed up fundraising, we are auctioning off a unique Ukrainian flag, which Roman Hrybov signed for us. It was this military man, together with his combat brothers that sent the russianfacists war ship and all of Russia in a known direction.</p>",
+        'for_what_2' => "<p>Friends, we want to remind you that the Ukrainian fighters from the 58th brigade are defending our Donetsk region. They need a PICKUP TRUCK truck as soon as possible.</p>
+                        <p>We continue to raise money for the vehicle and asking you to please join us ❤️ 🙏.</p>
+                        <p>After all , this specific car can make a lot of unpleasant things to the orcas in Ukrainian steppes.</p>
+                        <p>Pickup truck is very functional and can be driven anywhere! Our defenders can drive in it their fighters, evacuate the wounded from the battlefield, deliver ammunition on the positions and it can be transformed into a nightmare for the occupiers.</p>",
         'bid_history' => "History of rates as of",
         'footer_1' => "The charity auction was developed with the support of the volunteer organization All4Ukraine.",
         'footer_2' => "All rights reserved",

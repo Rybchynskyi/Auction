@@ -62,7 +62,7 @@ elseif ($info == "err_nobid") {
         </div>
     </div>
     <div class="col-sm-5">
-        <img src="img/hrybov.png" class="mx-auto d-block img-fluid my-4" alt="...">
+        <img class="mx-auto d-block img-fluid my-4 img_shadow_right" src="img/auction3_persp_trans.png" alt="...">
     </div>
 </div>
 
@@ -111,10 +111,10 @@ elseif ($info == "err_nobid") {
 </div>
 
 <div class="row  d-flex align-items-center justify-content-center my-4" id="Forwhat">
-    <div class="col-sm">
-        <img src="img/car.png" class="mx-auto d-block img-fluid my-4" alt="...">
+    <div class="col-sm-5">
+        <img class="mx-auto d-block img-fluid my-4 img_shadow_left" src="img/auction2_persp_trans.png" alt="...">
     </div>
-    <div class="col-sm text-white">
+    <div class="col-sm text-white ms-3">
         <h4 class="my-4"><?= $lang['for_what_1']?></h4>
         <p><?= $lang['for_what_2']?></p>
     </div>

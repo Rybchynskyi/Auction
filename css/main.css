@@ -88,3 +88,11 @@ ul.timeline > li:before {
     z-index: 400;
     margin-top: 26px;
 }
+
+.img_shadow_right {
+    filter: drop-shadow(7px 1px 10px #727272);
+}
+
+.img_shadow_left {
+    filter: drop-shadow(-7px 1px 10px #727272);
+}

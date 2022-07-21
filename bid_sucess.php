@@ -1,4 +1,5 @@
-<div style="position: absolute;" id="bid-alert" class="alert alert-success " role="alert">
-    <?= $lang['bid_sucess']?>
-    <button type="button" class="btn-close align-right" data-bs-dismiss="alert" aria-label="Закрити"></button>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading"><?= $lang['bid_sucess1']?></h4>
+    <p><?= $lang['bid_sucess2']?></p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
 </div>
