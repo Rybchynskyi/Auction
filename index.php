@@ -27,7 +27,7 @@ include 'header.php';
 //add menu and active page
 include 'menu.php';
 
-// Max bid for USD
+// Max bid for the USD
 if (get_user_lang() === 'en') {
     $max_bid = $max_bid / $currency;
 }
