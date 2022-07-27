@@ -3,7 +3,7 @@
 // DB connect
 require_once 'config/connect.php';
 
-//take currency
+//take the currency
 $currency = mysqli_query($connect,"SELECT `currency` FROM `currency`");
 $currency = mysqli_fetch_array($currency);
 $currency = $currency['currency'];
