@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Jul 29, 2022 20:00:00").getTime();
+var countDownDate = new Date("Aug 31, 2022 20:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -24,6 +24,11 @@ var x = setInterval(function() {
     // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timer").innerHTML = "ЗАКІНЧЕНО";
+
+        document.getElementById('bid-btn-1').remove();
+        document.getElementById('bid-btn-2').remove();
+        document.getElementById('timer_start').remove();
+        document.getElementById('bid-content').innerHTML = '';
+        document.getElementById('timer_end').style.display = 'block';
     }
 }, 0);

@@ -4,9 +4,10 @@
         'bid_sucess1' => 'Ставка прийнята успішно 👏',
         'bid_sucess2' => 'Підписуйтесь на наш <strong><a href="https://t.me/all4ukraineua">Telegram-бот</a></strong> щоб отримувати оперативну інформацію про підвищення ставки',
         'bid_failed' => "Ваша ставка нижча за актуальну",
-        'site_title_1' => "Розігруємо ексклюзивну гільзу від “Гвоздики”",
-        'site_title_2' => "<p>Вона дуже влучно відпрацювала по окупантам у травні 2022 року.  💪💙💛</p><p>Гільза, передана нашими героями - це чудовий сувенір, який в майбутньому залишиться у вас, як символ нашої Перемоги.</p><p>Вилучені кошти з аукціону будуть залучені на ",
-        'site_title_3' => "покупку пікапа героям з 58 бригади</p>",
+        'site_title_1' => "Комплект марок, підписаний Залужним",
+        'site_title_2' => "(латунь, висота 44см., діаметр 12 см.)",
+        'site_title_3' => "<p>Власником комплекту марок з легендарним підписом генерала Валерія Залужного стане той, хто запропонує найбільшу суму та сплатить її після завершення аукціону.</p><p>Усі отримані кошти з аукціону будуть залучені на ",
+        'site_title_4' => "придбання дуже потужного бандероптаха  для захисників Донеччини.</p>",
         'max_bid' => "Максимальна ставка: ",
         'make_a_bid' => "  Підняти ставку",
         'bid' => "ставки",
@@ -14,16 +15,16 @@
         'bids_quont' => " вже зроблено!",
         'timer_1' => "Благодійний аукціон закінчується через:",
         'timer_2' => " днів",
+        'timer_end' => "Аукціон закінчено",
         'currency' => "грн.",
         'history_1' => "Добродій ",
         'hide' => "(прихований) ",
         'history_2' => " підвищив ставку станом на: ",
         'show_all' => "Переглянути всі ставки",
-        'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на покупку пікапа героям з 58 бригади",
-        'for_what_2' => "<p>Друзі, нагадуємо вам, що українським бійцям з 58 бригади, що зараз тримають оборону нашої Донеччини, ТЕРМІНОВО потрібен ПІКАП.</p>
-                        <p>Ми продовжуємо збір на авто для хлопців і дуже просимо вас приєднуватися до нас ❤️🙏.</p>
-                        <p>Адже саме з допомогою такої машини можна зробити безліч неприємностей оркам у наших українських степах.</p>
-                        <p>Пікапи надзвичайно функціональні та всюдихідні! Можуть перевезти особовий склад, забрати з поля бою поранених, доставити боєкомплект на позицію, а також їх можна перетворити на озброєний кошмар для окупантів.</p>",
+        'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на придбання дуже потужного бандероптаха  для захисників Донеччини",
+        'for_what_2' => "<p>Ми продовжуємо збір коштів на бандероптаха для хлопців з військової частини А7222.</p>
+                        <p>Військові кожного дня працюють над прекрасним проектом під назвою БАВОВНА. Для кращого виконання завдань у проекті 😉 нашим котикам потрібен дрон.</p>
+                        <p>Хлопці натомість обіцяють багато бавовни 😉.</p>",
         'bid_history' => "Історія ставок станом на ",
         'footer_1' => "Платформа для благодійного аукціону була розроблена за підтримки волонтерської організації All4Ukraine.",
         'footer_2' => "Всі права захищені",
@@ -59,34 +60,36 @@
         'contacts_5' => "Instagram:",
         'contacts_6' => "Youtube:",
         'contacts_7' => "Tik-Tok:",
-        'FBpage' => "наша сторінка у Facebook",
+        'contacts_7' => "Tik-Tok:",
+        'end' => "Аукціон завершено",
 
     );
     $en = array(
         'bid_sucess1' => 'Bid accepted successfully 👏',
         'bid_sucess2' => 'Subscribe to our <strong><a href="https://t.me/all4ukraineua">Telegram bot</a></strong> to receive instant information about raising the rate',
         'bid_failed' => "Your bid is lower than expected",
-        'site_title_1' => "You placing bids for an exclusive sleeve from “Gvozdyka“",
-        'site_title_2' => "<p>She worked very well against the occupiers in May 2022. 💪💙💛 </p><p>Shell given by our heroes will become a great souvenir that in the future will be the symbol of our Victory. 
-</p><p>All the funds received from the auction will be given for",
-        'site_title_3' => "the purchase of a pickup truck for the 58th brigade</p>",
+        'site_title_1' => "Charity auction for Ukrainian Armed Forces is announced open!",
+        'site_title_2' => "(brass, height 44 cm., diameter 12 cm.)",
+        'site_title_3' => "<p>The owner of the set of mailing stamps with a signature from a legendary general Valerii Zaluzhnyi will be the one who will offer the best price and pay it off at the end of the auction.</p>
+<p>All the funds received from the auction will be given for",
+        'site_title_4' => "the purchase of a very powerful «bird» for the defenders of Donetsk region</p>",
         'max_bid' => "Max bet: ",
         'make_a_bid' => "  Raise bet",
         'bid' => "bids ",
         'bids' => "bids ",
         'bids_quont' => "already done!",
         'timer_1' => "Charity auction ends in:",
-        'timer_2' => "days",
+        'timer_2' => " days",
+        'timer_end' => "Auction has ended",
         'currency' => "USD",
         'history_1' => "",
         'hide' => "(hidden)",
         'history_2' => " increased rate as of:",
         'show_all' => "View all bids",
-        'for_what_1' => "All the funds received from the auction will be given for the purchase of a pickup truck for the 58th brigade",
-        'for_what_2' => "<p>Friends, we want to remind you that the Ukrainian fighters from the 58th brigade are defending our Donetsk region. They need a PICKUP TRUCK truck as soon as possible.</p>
-                        <p>We continue to raise money for the vehicle and asking you to please join us ❤️ 🙏.</p>
-                        <p>After all , this specific car can make a lot of unpleasant things to the orcas in Ukrainian steppes.</p>
-                        <p>Pickup truck is very functional and can be driven anywhere! Our defenders can drive in it their fighters, evacuate the wounded from the battlefield, deliver ammunition on the positions and it can be transformed into a nightmare for the occupiers.</p>",
+        'for_what_1' => "All the funds received from the auction will be given for the purchase of very important bird for the defenders of Donetsk region.",
+        'for_what_2' => "<p>We continue to raise money for combat bird for the military unit А7222.</p>
+                        <p>Our military is working every day under amazing project called “ Claps”. In order to better perform the army assignments 😉 our guys need a drone.</p>
+                        <p>Guys promising us a lot of claps 😉.</p>",
         'bid_history' => "History of rates as of",
         'footer_1' => "The charity auction was developed with the support of the volunteer organization All4Ukraine.",
         'footer_2' => "All rights reserved",
@@ -123,5 +126,6 @@
         'contacts_6' => "Youtube:",
         'contacts_7' => "Tik-Tok:",
         'FBpage' => "Our Facebook page",
+        'end' => "Auction is over",
     );
 ?>

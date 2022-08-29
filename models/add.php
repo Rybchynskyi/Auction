@@ -74,10 +74,10 @@ if ($bid >$max_bid) {
     $bid_ua = number_format($bid, 2, ',', ' ' );
     $bid_en = number_format($bid / $currency, 2, ',', ' ' );
     $message = "Добродій " . $status_name_ua . " підвищив ставку до: " . $bid_ua . " грн. %0A %0A" . $status_name_en . " raised the rate to: " . $bid_en . "$";
-    //send to our public group
+    //send to public group
     $telegram_send = fopen("https://api.telegram.org/bot5430503074:AAHdewxbqqwDt_03y-IwNRvDK5ARkIaNtVY/sendMessage?chat_id=-1001514220516&text=$message", "r");
     //send to our private group
-    //$telegram_send = fopen("https://api.telegram.org/bot5476468086:AAHGcMnLexL9eSPgAtsjYuElYzPkm75R6RA/sendMessage?chat_id=-678534217&text=$message", "r");
+    $telegram_send = fopen("https://api.telegram.org/bot5476468086:AAHGcMnLexL9eSPgAtsjYuElYzPkm75R6RA/sendMessage?chat_id=-678534217&text=$message", "r");
     // backup log to file
     file_put_contents('log.txt', $bids_time . " " . $bids_name . " " . $bid_ua . " " . $bids_contact . " " . $bids_phone . " " . $show_bids_name . "\r\n", FILE_APPEND);
     // go to the previous page

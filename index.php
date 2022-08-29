@@ -3,7 +3,7 @@
 // DB connect
 require_once 'config/connect.php';
 
-//take the currency
+//take currency
 $currency = mysqli_query($connect,"SELECT `currency` FROM `currency`");
 $currency = mysqli_fetch_array($currency);
 $currency = $currency['currency'];
@@ -27,7 +27,7 @@ include 'header.php';
 //add menu and active page
 include 'menu.php';
 
-// Max bid for the USD
+// Max bid for USD
 if (get_user_lang() === 'en') {
     $max_bid = $max_bid / $currency;
 }
@@ -53,16 +53,19 @@ elseif ($info == "err_nobid") {
 <div class="row d-flex align-items-center justify-content-center my-4">
     <div class="col-sm-7 block-center">
         <div class="px-3">
-            <h1 class="text-white mt-4"><?= $lang['site_title_1']?></h1><br>
-            <h5 class="lead text-white pb-4"><?= $lang['site_title_2']?> <a class="link" href="#Forwhat"><u><?= $lang['site_title_3']?></u></a></h5>
+            <h1 class="text-white mt-4"><?= $lang['site_title_1']?></h1>
+<!--            <small class="text-white">--><?//= $lang['site_title_2']?><!--</small>-->
+            <br><br>
+            <h5 class="lead text-white pb-4"><?= $lang['site_title_3']?> <a class="link" href="#Forwhat"><u><?= $lang['site_title_4']?></u></a></h5>
             <h3 class="text-white my-4"><?= $lang['max_bid']?><? echo number_format($max_bid, 2, ',', ' ' ); ?> <?= $lang['currency']?></h3>
             <p class="lead">
-                <button type="button" class="btn btn-success btn-shadow  btn-lg my-4" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
+                <button type="button" id='bid-btn-1' class="btn btn-success btn-shadow  btn-lg my-4" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
             </p>
+<!--            <b class="text-white">--><?//= $lang['end']?><!--</b>-->
         </div>
     </div>
     <div class="col-sm-5">
-        <img class="mx-auto d-block img-fluid my-4 img_shadow_right" src="img/auction3_persp_trans.png" alt="...">
+        <img class="mx-auto d-block img-fluid my-4 img_shadow_right" src="img/auction4_persp_trans.png" alt="...">
     </div>
 </div>
 
@@ -75,10 +78,15 @@ elseif ($info == "err_nobid") {
 <div class="row">
     <div class="col-md-6 offset-md-3">
         <h1 class="text-center text-white my-4"><?= $num_bids["COUNT(*)"]; ?> <?=$bid_word?><?= $lang['bids_quont']?></h1>
-
-        <div class="text-center  my-4"><button type="button" class="btn btn-success  btn-lg btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button></div>
+        <div class="text-center  my-4">
+            <button type="button" id='bid-btn-2' class="btn btn-success  btn-lg btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button></div>
         <div class="text-left mt-4">
-            <h5 class="text-white"><?= $lang['timer_1']?></h5><h1 class="text-yellow"><span id="days_left"></span><?= $lang['timer_2']?><span id="timer"></span></h1>
+            <h5 id="timer_start" class="text-white"><?= $lang['timer_1']?></h5>
+            <h1 id="bid-content" class="text-yellow">
+                <span id="days_left"></span><?= $lang['timer_2']?>
+                <span id="timer"></span>
+            </h1>
+            <h1 id="timer_end" class="timer_end text-yellow"><?= $lang['timer_end']?></h1>
         </div>
         <ul class="timeline">
             <?php foreach ($bids_history as $one_bid): ?>
@@ -112,7 +120,7 @@ elseif ($info == "err_nobid") {
 
 <div class="row  d-flex align-items-center justify-content-center my-4" id="Forwhat">
     <div class="col-sm-5">
-        <img class="mx-auto d-block img-fluid my-4 img_shadow_left" src="img/auction2_persp_trans.png" alt="...">
+        <img class="mx-auto d-block img-fluid my-4 img_shadow_left" src="img/auction4_persp_trans2.png" alt="...">
     </div>
     <div class="col-sm text-white ms-3">
         <h4 class="my-4"><?= $lang['for_what_1']?></h4>
@@ -166,7 +174,7 @@ elseif ($info == "err_nobid") {
 
 
 
-<script src="js/timer.js"></script>
+<script src="js/timer2.js"></script>
 <script
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

@@ -1,12 +1,14 @@
-2022-07-04 12:36:19 Aleksandr Rybchinskiy 126,36 systemator20@gmail.com 0637025256 on
-2022-07-04 12:36:25 Aleksandr Rybchinskiy 126,37 systemator20@gmail.com 0637025256 on
-2022-07-04 13:19:33 <link href="https://systemator.pro/templates/systemator/css/style.min2.css?3400923ac3fe075fed761ca3f1aac8f6" rel="stylesheet"> 126,38 systemator20@gmail.com 0637025256 on
-2022-07-04 13:20:45 &lt;link href=&quot;https://systemator.pro/templates/systemator/css/style.min2.css?3400923ac3fe075fed761ca3f1aac8f6&quot; rel=&quot;stylesheet&quot;&gt; 126,38 systemator20@gmail.com 0637025256 on
-2022-07-04 15:38:44 <link href="https://systemator.pro/templates/systemator/css/transform.css?3400923ac3fe075fed761ca3f1aac8f6" rel="stylesheet"> 126,38 systemator20@gmail.com 0637025256 on
-2022-07-04 15:39:14 <link href="https://systemator.pro/templates/systemator/css/transform.css" rel="stylesheet"> 126,39 systemator20@gmail.com 0637025256 on
-2022-07-04 15:39:57 &lt;link href=&quot;https://systemator.pro/templates/systemator/css/transform.css&quot; rel=&quot;stylesheet&quot;&gt; 126,40 systemator20@gmail.com 0637025256 on
-2022-07-05 15:30:25 &lt;link href=&quot;https://systemator.pro/templates/systemator/css/transform.css&quot; rel=&quot;stylesheet&quot;&gt; 126,60 systemator20@gmail.com 0637025256 on
-2022-07-21 11:25:21 Олександр 126,64 alexandr.rybchinskij@gmail.com 0637025256 on
-2022-07-21 11:25:29 Олександр 126,65 alexandr.rybchinskij@gmail.com 0637025256 on
-2022-07-21 12:20:09 Олександр 500,01 alexandr.rybchinskij@gmail.com 0637025256 on
-2022-07-21 21:46:47 Олександр 500,02 alexandr.rybchinskij@gmail.com 0637025256 on
+2022-08-22 22:45:25 Початкова ставка / Initial bid 1 000,00 alexandr.rybchinskij@gmail.com 0637025256 on
+2022-08-22 23:46:24 Вячеслав 3 000,00 slavik180419990@ukr.net 0638804058 on
+2022-08-23 17:25:39 Andriy 3 145,00 and92kom@gmail.com +393400834505 on
+2022-08-23 17:33:35 Вячеслав 3 500,00 slavik180419990@ukr.net 0638804058 on
+2022-08-23 18:11:43 Linda Vargova 5 550,00 vargova.linda@gmail.com +421905372063 on
+2022-08-23 21:02:38 Володимир 10 000,00 mironov35@ukr.net +38 (066) 322-57-90 on
+2022-08-24 01:08:56 Judy Labashosky 11 100,00 agrd420@aol.com 6104202202 on
+2022-08-24 14:24:37 Мирон 15 000,00 volens2015@gmail.com +12165441200 on
+2022-08-24 21:50:22 Володимир 20 000,00 mironov35@ukr.net +38 (066) 322-57-90 on
+2022-08-25 16:28:17 Алексей 25 000,00 onufriy47@gmail.com 0935824556 on
+2022-08-26 20:38:51 Володимир 30 000,00 mironov35@ukr.net +38 (066) 322-57-90 on
+2022-08-29 13:44:33 Алексей 33 000,00 onufriy47@gmail.com + 38 (093) 582-45-56 on
+2022-08-29 18:16:09 Володимир 40 000,00 mironov35@ukr.net +38 (066) 322-57-90 on
+2022-08-29 21:28:13 Початкова ставка / Initial bid 40 370,33 alexandr.rybchinskij@gmail.com 0637025256 on
