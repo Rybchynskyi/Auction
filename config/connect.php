@@ -2,7 +2,7 @@
 //database settings
 define('HOST', 'localhost');
 define('USER', 'root');
-define('PASSWORD', '');
+define('PASSWORD', 'root');
 define('DATABASE', 'auction');
 
 //make connection

@@ -57,7 +57,7 @@ elseif ($info == "err_nobid") {
 <!--            <small class="text-white">--><?//= $lang['site_title_2']?><!--</small>-->
             <br><br>
             <h5 class="lead text-white pb-4"><?= $lang['site_title_3']?> <a class="link" href="#Forwhat"><u><?= $lang['site_title_4']?></u></a></h5>
-            <h3 class="text-white my-4"><?= $lang['max_bid']?><? echo number_format($max_bid, 2, ',', ' ' ); ?> <?= $lang['currency']?></h3>
+            <h3 class="text-white my-4"><?= $lang['max_bid']?><?= number_format($max_bid, 2, ',', ' ' ); ?> <?= $lang['currency']?></h3>
             <p class="lead">
                 <button type="button" id='bid-btn-1' class="btn btn-success btn-shadow  btn-lg my-4" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
             </p>
@@ -68,11 +68,6 @@ elseif ($info == "err_nobid") {
         <img class="mx-auto d-block img-fluid my-4 img_shadow_right" src="img/auction4_persp_trans.png" alt="...">
     </div>
 </div>
-
-
-
-
-
 
 
 <div class="row">
