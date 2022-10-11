@@ -4,10 +4,10 @@
         'bid_sucess1' => 'Ставка прийнята успішно 👏',
         'bid_sucess2' => 'Підписуйтесь на наш <strong><a href="https://t.me/all4ukraineua">Telegram-бот</a></strong> щоб отримувати оперативну інформацію про підвищення ставки',
         'bid_failed' => "Ваша ставка нижча за актуальну",
-        'site_title_1' => "Комплект марок, підписаний Залужним",
+        'site_title_1' => "Прапор підписаний зірками та коментаторами українського футболу",
         'site_title_2' => "(латунь, висота 44см., діаметр 12 см.)",
-        'site_title_3' => "<p>Власником комплекту марок з легендарним підписом генерала Валерія Залужного стане той, хто запропонує найбільшу суму та сплатить її після завершення аукціону.</p><p>Усі отримані кошти з аукціону будуть залучені на ",
-        'site_title_4' => "придбання дуже потужного бандероптаха  для захисників Донеччини.</p>",
+        'site_title_3' => "<p>Серед підписантів: Євген Хачеріді, В‘ячеслав Шевчук, Владислав Ващук, Сергій Нагорняк, а також Віктор Вацко та Ігор Циганик. І це ще далеко не всі, хто підписав стяг.</p><p>Власником прапору стане той, хто запропонує найбільшу суму та сплатить її після завершення аукціону.</p><p>Усі отримані кошти з аукціону будуть залучені на ",
+        'site_title_4' => "покупку ретранслятора для зв'язку захисникам в 46 бригаду</p>",
         'max_bid' => "Максимальна ставка: ",
         'make_a_bid' => "  Підняти ставку",
         'bid' => "ставки",
@@ -21,10 +21,9 @@
         'hide' => "(прихований) ",
         'history_2' => " підвищив ставку станом на: ",
         'show_all' => "Переглянути всі ставки",
-        'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на придбання дуже потужного бандероптаха  для захисників Донеччини",
-        'for_what_2' => "<p>Ми продовжуємо збір коштів на бандероптаха для хлопців з військової частини А7222.</p>
-                        <p>Військові кожного дня працюють над прекрасним проектом під назвою БАВОВНА. Для кращого виконання завдань у проекті 😉 нашим котикам потрібен дрон.</p>
-                        <p>Хлопці натомість обіцяють багато бавовни 😉.</p>",
+        'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на покупку ретранслятора для зв'язку захисникам в 46 бригаду",
+        'for_what_2' => "<p>Ця штуковина дуже потрібна нашим військовим. Адже саме цей гаджет дозволяє отримати якісний зв'язок у важких бойових умовах.</p>
+                        <p>Свій ретранслятор хлопці нещодавно втратили під час жорстких бойових дій. А без зв'язку виконувати надважливі завдання просто неможливо.</p>",
         'bid_history' => "Історія ставок станом на ",
         'footer_1' => "Платформа для благодійного аукціону була розроблена за підтримки волонтерської організації All4Ukraine.",
         'footer_2' => "Всі права захищені",
@@ -68,11 +67,11 @@
         'bid_sucess1' => 'Bid accepted successfully 👏',
         'bid_sucess2' => 'Subscribe to our <strong><a href="https://t.me/all4ukraineua">Telegram bot</a></strong> to receive instant information about raising the rate',
         'bid_failed' => "Your bid is lower than expected",
-        'site_title_1' => "Charity auction for Ukrainian Armed Forces is announced open!",
+        'site_title_1' => "The flag signed by the stars of Ukrainian soccer",
         'site_title_2' => "(brass, height 44 cm., diameter 12 cm.)",
-        'site_title_3' => "<p>The owner of the set of mailing stamps with a signature from a legendary general Valerii Zaluzhnyi will be the one who will offer the best price and pay it off at the end of the auction.</p>
-<p>All the funds received from the auction will be given for",
-        'site_title_4' => "the purchase of a very powerful «bird» for the defenders of Donetsk region</p>",
+        'site_title_3' => "<p>Signed by : Yevhen Khacheridi, Vyacheslav Shevchuk, Vladyslav  Vashchuk, Serhiy Nahorniak, Viktor Vatsko and Ihor Tsyhanyk. And it’s not all who signed the flag.<p>The owner of the flag will be the person with a highest amount bid that will be paid after the auction is completed.</p>
+<p>All the funds received from the auction will go to ",
+        'site_title_4' => "the purchase of repeater device for connection for the 46th brigade.</p>",
         'max_bid' => "Max bet: ",
         'make_a_bid' => "  Raise bet",
         'bid' => "bids ",
@@ -86,10 +85,9 @@
         'hide' => "(hidden)",
         'history_2' => " increased rate as of:",
         'show_all' => "View all bids",
-        'for_what_1' => "All the funds received from the auction will be given for the purchase of very important bird for the defenders of Donetsk region.",
-        'for_what_2' => "<p>We continue to raise money for combat bird for the military unit А7222.</p>
-                        <p>Our military is working every day under amazing project called “ Claps”. In order to better perform the army assignments 😉 our guys need a drone.</p>
-                        <p>Guys promising us a lot of claps 😉.</p>",
+        'for_what_1' => "All the funds received from the auction will go to the purchase of repeater device for connection for the 46th brigade",
+        'for_what_2' => "<p>This item is very necessary for our military. Because of this special gadget they can get quality connection in the difficult combat conditions.</p>
+                        <p>Guys lost their repeater recently during difficult combat fight. To fulfill the important assignments without a connection  are not possible.</p>",
         'bid_history' => "History of rates as of",
         'footer_1' => "The charity auction was developed with the support of the volunteer organization All4Ukraine.",
         'footer_2' => "All rights reserved",

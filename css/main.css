@@ -96,8 +96,14 @@ ul.timeline > li:before {
 
 .img_shadow_right {
     filter: drop-shadow(7px 1px 10px #727272);
+    transform-origin: 0 50%;
+    transform: perspective(625px) rotateY(345deg);
+    border-radius: 8px;
 }
 
 .img_shadow_left {
     filter: drop-shadow(-7px 1px 10px #727272);
+    transform-origin: 0 50%;
+    transform: perspective(625px) rotateY(365deg);
+    border-radius: 8px;
 }
