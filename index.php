@@ -51,37 +51,61 @@ elseif ($info == "err_nobid") {
 
 ?>
 <div class="row d-flex align-items-center justify-content-center my-4">
-    <div class="col-sm-7 block-center">
+    <div class="col-md-7 align-self-center">
         <div class="px-3">
-            <h1 class="text-white mt-4"><?= $lang['site_title_1']?></h1>
-<!--            <small class="text-white">--><?//= $lang['site_title_2']?><!--</small>-->
-            <br><br>
-            <h5 class="lead text-white pb-4"><?= $lang['site_title_3']?> <a class="link" href="#Forwhat"><u><?= $lang['site_title_4']?></u></a></h5>
-            <h3 class="text-white my-4"><?= $lang['max_bid']?><? echo number_format($max_bid, 2, ',', ' ' ); ?> <?= $lang['currency']?></h3>
-            <p class="lead">
-                <button type="button" id='bid-btn-1' class="btn btn-success btn-shadow  btn-lg my-4" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
-            </p>
-<!--            <b class="text-white">--><?//= $lang['end']?><!--</b>-->
+            <div class="glass_effect px-4 py-3 mb-3">
+                <h2 class="text-white"><?= $lang['site_title_1']?></h2>
+                <!--            <small class="text-white">--><?//= $lang['site_title_2']?><!--</small>-->
+                <h6 class="my-5 text-white"><?= $lang['site_title_3']?> <a class="link" href="#Forwhat"><u><?= $lang['site_title_4']?></u></a></h6>
+                <h3 id="bids_quant" class="text-white d-none"><?= $lang['max_bid']?><?= number_format($max_bid, 2, ',', ' ' ) . " " . $lang['currency']?></h3>
+                <p class="lead">
+                    <button type="button" id='bid-btn-1' class="btn btn-success btn-shadow btn-lg mt-4 d-none" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button>
+                </p>
+            </div>
+
+
         </div>
     </div>
-    <div class="col-sm-5">
-        <img class="mx-auto d-block img-fluid my-4 img_shadow_right" src="img/auction5_persp_trans.png" alt="...">
+    <div class="col-md-5 align-self-center">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active pe-3" data-bs-interval="7000">
+                    <img class="d-block img-fluid img_shadow_right" src="img/photo_2022-10-19 14.29.46.jpeg" alt="...">
+                </div>
+                <div class="carousel-item align-self-center" data-bs-interval="7000">
+                    <video class="video"  autoplay muted loop >
+                        <source type="video/mp4" src="img/telegram-cloud-document-2-5361676939981497253.mp4">
+                    </video>
+                </div>
+                <div class="carousel-item" data-bs-interval="7000">
+                    <img class="d-block img-fluid img_shadow_right " src="img/photo_2022-10-19 14.29.43.jpeg" alt="...">
+                </div>
+            </div>
+<!--            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">-->
+<!--                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                <span class="visually-hidden">Предыдущий</span>-->
+<!--            </button>-->
+<!--            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">-->
+<!--                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                <span class="visually-hidden">Следующий</span>-->
+<!--            </button>-->
+        </div>
     </div>
 </div>
 
-
-
-
-
-
-
-<div class="row">
+<div class="row d-flex p-3 mx-auto flex-column ">
     <div class="col-md-6 offset-md-3">
-        <h1 class="text-center text-white my-4"><?= $num_bids["COUNT(*)"]; ?> <?=$bid_word?><?= $lang['bids_quont']?></h1>
+        <h1 id="text_before" class="text-center text-white my-4"><?= $lang['timerStart_1']?></h1>
+        <h1 id="text_after" class="text-center text-white my-4 d-none"><?= $num_bids["COUNT(*)"]; ?> <?=$bid_word?><?= $lang['bids_quont']?></h1>
         <div class="text-center  my-4">
-            <button type="button" id='bid-btn-2' class="btn btn-success  btn-lg btn-shadow" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button></div>
+            <button type="button" id='bid-btn-2' class="btn btn-success btn-lg btn-shadow d-none" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-solid fa-circle-up" data-toggle="modal" data-target="#create"></i><?= $lang['make_a_bid']?></button></div>
         <div class="text-left mt-4">
-            <h5 id="timer_start" class="text-white"><?= $lang['timer_1']?></h5>
+            <h5 id="timer_start" class="text-white d-none"><?= $lang['timer_1']?></h5>
             <h1 id="bid-content" class="text-yellow">
                 <span id="days_left"></span><?= $lang['timer_2']?>
                 <span id="timer"></span>
@@ -109,18 +133,18 @@ elseif ($info == "err_nobid") {
     </div>
 </div>
 
-<div class="row newblock subіcribe d-flex align-items-center justify-content-center">
-    <div class="col-sm-9 my-4 ">
+<div class="row my-5 py-4 glass_effect d-flex align-items-center justify-content-center">
+    <div class="col-sm-9">
         <h3 class="text-white text-center "><?= $lang['telegram']?></h3>
     </div>
-    <div class="col-sm-3 my-4 text-center">
+    <div class="col-sm-3 text-center">
         <a href="https://t.me/all4ukraineua"><button type="button" class="btn btn btn-primary btn-shadow btn-lg" data-bs-toggle="modal" data-bs-target="#create"><i class="fa-brands fa-telegram fa-xl"></i><?= $lang['subscribe']?></button></a>
     </div>
 </div>
 
 <div class="row  d-flex align-items-center justify-content-center my-4" id="Forwhat">
     <div class="col-sm-5">
-        <img class="mx-auto d-block img-fluid my-4 img_shadow_left" src="img/auction5_persp_trans.jpg" alt="...">
+        <img class="mx-auto d-block img-fluid my-4 img_shadow_left" src="img/suv_peredova.jpg" alt="...">
     </div>
     <div class="col-sm text-white ms-3">
         <h4 class="my-4"><?= $lang['for_what_1']?></h4>
@@ -130,9 +154,9 @@ elseif ($info == "err_nobid") {
 
 <!-- make a new bid (modal window) -->
 
-<div class="modal fade " id="create" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+<div class="modal fade" id="create" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content glass_popup">
             <div class="modal-header">
                 <h5 class="modal-title"><i class="fa-solid fa-hand-holding-dollar"></i><?= $lang['add_bill_new']?> <?=number_format($max_bid, 2, ',', ' ' )?> <?= $lang['currency']?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
@@ -174,7 +198,7 @@ elseif ($info == "err_nobid") {
 
 
 
-<script src="js/timer2.js"></script>
+<script src="js/timer5.js"></script>
 <script
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

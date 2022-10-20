@@ -1,14 +1,27 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 12, 2022 19:59:00").getTime();
+var startDate = new Date("Oct 19, 2022 16:40:01").getTime();
+var countDownDate = new Date("Oct 19, 2022 17:40:20").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
-
-    // Get todays date and time
+    // Doday`s date
     var now = new Date().getTime();
 
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
+    if (now < startDate) {
+        var distance = startDate - now;
+
+    }
+    else if (now > startDate) {
+        document.getElementById('text_before').classList.add("d-none");
+        document.getElementById('text_after').classList.remove("d-none");
+        document.getElementById('bids_quant').classList.remove("d-none");
+
+        document.getElementById('timer_start').classList.remove("d-none");
+        //show buttons
+        document.getElementById('bid-btn-1').classList.remove("d-none");
+        document.getElementById('bid-btn-2').classList.remove("d-none");
+        var distance = countDownDate - now;
+    }
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));

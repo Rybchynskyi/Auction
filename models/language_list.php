@@ -4,16 +4,19 @@
         'bid_sucess1' => 'Ставка прийнята успішно 👏',
         'bid_sucess2' => 'Підписуйтесь на наш <strong><a href="https://t.me/all4ukraineua">Telegram-бот</a></strong> щоб отримувати оперативну інформацію про підвищення ставки',
         'bid_failed' => "Ваша ставка нижча за актуальну",
-        'site_title_1' => "Прапор підписаний зірками та коментаторами українського футболу",
+        'site_title_1' => "Прапор, підписаний у найпозитивнішого шеф-повара сучасності Євгена Клопотенка",
         'site_title_2' => "(латунь, висота 44см., діаметр 12 см.)",
-        'site_title_3' => "<p>Серед підписантів: Євген Хачеріді, В‘ячеслав Шевчук, Владислав Ващук, Сергій Нагорняк, а також Віктор Вацко та Ігор Циганик. І це ще далеко не всі, хто підписав стяг.</p><p>Власником прапору стане той, хто запропонує найбільшу суму та сплатить її після завершення аукціону.</p><p>Усі отримані кошти з аукціону будуть залучені на ",
-        'site_title_4' => "покупку ретранслятора для зв'язку захисникам в 46 бригаду</p>",
+        'site_title_3' => "<p>Ви ж пам'ятаєте, що саме з його подачі наш борщ став спадщиною ЮНЕСКО?</p>
+                            <p>Так-от. Євген Клопотенко дуже оригінально підписав стяг - написав на ньому рецепт українських галушок!</p>
+                            <p>Усі отримані кошти з аукціону будуть залучені на ",
+        'site_title_4' => "покупку автівки для захисників з в/ч А0281</p>",
         'max_bid' => "Максимальна ставка: ",
         'make_a_bid' => "  Підняти ставку",
         'bid' => "ставки",
         'bids' => "ставок",
         'bids_quont' => " вже зроблено!",
         'timer_1' => "Благодійний аукціон закінчується через:",
+        'timerStart_1' => "Благодійний аукціон починається через:",
         'timer_2' => " днів",
         'timer_end' => "Аукціон закінчено",
         'currency' => "грн.",
@@ -21,14 +24,15 @@
         'hide' => "(прихований) ",
         'history_2' => " підвищив ставку станом на: ",
         'show_all' => "Переглянути всі ставки",
-        'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на покупку ретранслятора для зв'язку захисникам в 46 бригаду",
-        'for_what_2' => "<p>Ця штуковина дуже потрібна нашим військовим. Адже саме цей гаджет дозволяє отримати якісний зв'язок у важких бойових умовах.</p>
-                        <p>Свій ретранслятор хлопці нещодавно втратили під час жорстких бойових дій. А без зв'язку виконувати надважливі завдання просто неможливо.</p>",
+        'for_what_1' => "Усі отримані кошти з аукціону будуть залучені на покупку автівки для захисників з в/ч А0281",
+        'for_what_2' => "<p>Автівка потрібна,  для виконання серйозних бойових завдань в складнопрохідній місцевості.</p>
+                        <p>До речі, у військовослужбовця, який до нас звернувся, якраз нещодавно був день народження.</p>
+                        <p>Давайте разом привітаємо нашого захисника та задонатимо на автівку для його підрозділу.</p>",
         'bid_history' => "Історія ставок станом на ",
         'footer_1' => "Платформа для благодійного аукціону була розроблена за підтримки волонтерської організації All4Ukraine.",
         'footer_2' => "Всі права захищені",
         'footer_3' => "Наша сторінка Facebook",
-        'add_bill_new' => "Перебити ставку",
+        'add_bill_new' => " Перебити ставку",
         'add_bill_amount' => "Ставка (ціле число в гривні)",
         'add_bill_name' => "Ім`я",
         'add_bill_showname' => "   Показувати моє ім`я іншим учасникам",
@@ -60,6 +64,7 @@
         'contacts_6' => "Youtube:",
         'contacts_7' => "Tik-Tok:",
         'contacts_7' => "Tik-Tok:",
+        'FBpage' => "Наша facebook сторінка ",
         'end' => "Аукціон завершено",
 
     );
@@ -67,17 +72,19 @@
         'bid_sucess1' => 'Bid accepted successfully 👏',
         'bid_sucess2' => 'Subscribe to our <strong><a href="https://t.me/all4ukraineua">Telegram bot</a></strong> to receive instant information about raising the rate',
         'bid_failed' => "Your bid is lower than expected",
-        'site_title_1' => "The flag signed by the stars of Ukrainian soccer",
+        'site_title_1' => "A flag of Ukraine, signed by the most positive modern chief cook Yevhen Klopotenko",
         'site_title_2' => "(brass, height 44 cm., diameter 12 cm.)",
-        'site_title_3' => "<p>Signed by : Yevhen Khacheridi, Vyacheslav Shevchuk, Vladyslav  Vashchuk, Serhiy Nahorniak, Viktor Vatsko and Ihor Tsyhanyk. And it’s not all who signed the flag.<p>The owner of the flag will be the person with a highest amount bid that will be paid after the auction is completed.</p>
-<p>All the funds received from the auction will go to ",
-        'site_title_4' => "the purchase of repeater device for connection for the 46th brigade.</p>",
+        'site_title_3' => "<p>Do you remember that our Borscht became a heritage of UNESCO thanks to his presentation?</p>
+                            <p>So here you go . Yevhen Klopotenko very originally signed a flag by writing on it the recipe for Ukrainian Halushky!</p>
+                            <p>All the funds received will be donated to ",
+        'site_title_4' => "the purchase of the vehicle for the defenders of the army unit A0281</p>",
         'max_bid' => "Max bet: ",
         'make_a_bid' => "  Raise bet",
         'bid' => "bids ",
         'bids' => "bids ",
         'bids_quont' => "already done!",
         'timer_1' => "Charity auction ends in:",
+        'timerStart_1' => "Charity auction starts in:",
         'timer_2' => " days",
         'timer_end' => "Auction has ended",
         'currency' => "USD",
@@ -85,9 +92,10 @@
         'hide' => "(hidden)",
         'history_2' => " increased rate as of:",
         'show_all' => "View all bids",
-        'for_what_1' => "All the funds received from the auction will go to the purchase of repeater device for connection for the 46th brigade",
-        'for_what_2' => "<p>This item is very necessary for our military. Because of this special gadget they can get quality connection in the difficult combat conditions.</p>
-                        <p>Guys lost their repeater recently during difficult combat fight. To fulfill the important assignments without a connection  are not possible.</p>",
+        'for_what_1' => "All the funds received from the auction will go to the purchase of the vehicle for the defenders of the army unit A0281",
+        'for_what_2' => "<p>The vehicle is necessary in order to perform serious combat assignments in hard to reach places.</p>
+                        <p>By the way , the military person that contacted us recently had a birthday.</p>
+                        <p>Let’s wish him happy late birthday to our defender and donate for the vehicle for his army unit.</p>",
         'bid_history' => "History of rates as of",
         'footer_1' => "The charity auction was developed with the support of the volunteer organization All4Ukraine.",
         'footer_2' => "All rights reserved",

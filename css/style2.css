@@ -1,14 +1,35 @@
+body {
+
+    font-family: "Inter",-apple-system,"Nunito",BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+.glass_effect {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-glass {
+    background-color: #2ea44f;
+    background-image: var(--bs-gradient);
+    border-color: #2ea44f;
+    box-shadow: 0 1px 1px rgb(18 21 26 / 8%);
+    color: #fff;
+}
+
+.btn-glass:hover {
+    background-color: #2a8844;
+    background-image: var(--bs-gradient);
+    border-color: #2ea44f;
+    box-shadow: 0 1px 1px rgb(18 21 26 / 8%);
+    color: #fff;
+}
+
 .textbrand {
     font-size: xx-large;
-}
-
-.subіcribe {
-    border: 1px solid white;
-    border-radius: 20px;
-}
-
-.newblock {
-    margin-top: 100px;
 }
 
 .link {
@@ -29,6 +50,14 @@ nav {
 
 .navbar-collapse {
     flex-grow: 0; !important;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.nav-link:hover {
+
 }
 
 .nav-link.active {
@@ -95,10 +124,15 @@ ul.timeline > li:before {
 }
 
 .img_shadow_right {
-    filter: drop-shadow(7px 1px 10px #727272);
-    transform-origin: 0 50%;
-    transform: perspective(625px) rotateY(345deg);
+
+    transform-origin: 100% 0%;
+    transform: perspective(1436px) rotateY(354deg);
     border-radius: 8px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+    left: 5%;
 }
 
 .img_shadow_left {
@@ -106,4 +140,19 @@ ul.timeline > li:before {
     transform-origin: 0 50%;
     transform: perspective(625px) rotateY(365deg);
     border-radius: 8px;
+}
+
+.glass_popup {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.video {
+    width: 100%;
+
 }
