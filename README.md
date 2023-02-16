@@ -9,12 +9,12 @@
 Platform:<br>
 <a thref="https://www.bid.all4ukraine.org/" target="_blank">bid.all4ukraine.org</a>
 
-##For deploying:
+## For deploying:
 1. Download the project
 2. Import [database.sql](https://github.com/Rybchynskyi/auction/blob/master/database.sql) into your local database
 3. Run server with PHP >=7.1 
 
-##About the project
+## About the project
 Previously, the volunteer organization conducted auctions manually, in social networks. It was inconvenient, confusing for users and not very effective.
 
 <table border="0">
