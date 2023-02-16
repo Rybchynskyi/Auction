@@ -6,6 +6,15 @@
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
+Platform:<br>
+<a thref="https://www.bid.all4ukraine.org/" target="_blank">bid.all4ukraine.org</a>
+
+##For deploying:
+1. Download the project
+2. Import [database.sql](https://github.com/Rybchynskyi/auction/blob/master/database.sql) into your local database
+3. Run server with PHP >=7.1 
+
+##About the project
 Previously, the volunteer organization conducted auctions manually, in social networks. It was inconvenient, confusing for users and not very effective.
 
 <table border="0">
