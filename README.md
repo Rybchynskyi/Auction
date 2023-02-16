@@ -24,8 +24,17 @@ Previously, the volunteer organization conducted auctions manually, in social ne
     </td>
  </tr>
 </table>
-
-For easier placing new bets without registration, all user data is stored in cookies when user make the first bet. And then whe user will make new offer - user data are added to input fields from cookies:
+<br>
+For easier placing new bets without registration, when user made his first bet - user data is stored in cookies. And when user will make new offer - user data are added to input fields from cookies:
 <p align="center">
   <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/Auction/popup.png" width="600">
 </p>
+<br>
+The website provides authentication only for volunteers. If the volunteer enters his login and password, he will be able to visit the page with a list of all bets and contact details of the participants:
+ <p align="center">
+   <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/Auction/adminPanel.png" width="800">
+ </p>
+<br>
+On this page it is possible to change the exchange rate.<br>
+This is necessary because ukrainian currency hryvnia can be understendible for users. Thats why I developed the functionality for accepting both currencies: in hryvnias (for Ukrainian users) and in dollars (for foreigners).<br>
+This gives us the opportunity to conducting auctions all over the world and raise funds for the needs of the armed forces of Ukraine 💪💙💛
