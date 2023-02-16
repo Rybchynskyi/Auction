@@ -28,7 +28,7 @@ $lang = get_user_lang() === 'en' ? $en : $ua;
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?= $lang['menu_lang']?>
+                        <i class="fa-solid fa-earth-americas"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="models/lang.php?lang=ua">UA,грн.</a></li>

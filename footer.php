@@ -1,7 +1,7 @@
     <hr style="color: white">
     <div class="row text-white">
         <div class="col-sm-6">
-            <img class="rounded" style="width: 200px; float: left; margin-right: 10px" src="img/FBall4.png">
+            <img class="rounded" style="width: 200px; float: left; margin-right: 10px" src="img/logo/FBall4.png">
             <h6><small><?= $lang['copyright']?></small></h6>
             <h6><small><?= $lang['all_rules']?></small></h6>
         </div>
