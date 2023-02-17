@@ -7,7 +7,7 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 Platform:<br>
-<a thref="https://www.bid.all4ukraine.org/" target="_blank">bid.all4ukraine.org</a>
+[bid.all4ukraine.org](https://www.bid.all4ukraine.org/)
 
 ## For deploying:
 1. Download the project
@@ -25,16 +25,14 @@ Previously, the volunteer organization conducted auctions manually, in social ne
       </p>
     </td>
     <td>
-      The main purpose of this platform is to create a simple user-interface for raising bids for a product, fixing these bids and receiving the participant's contact information.<br>
+      The main business-purpose of this platform is simple raising bids for a product fo users around the world. It must be with simple user-interface, without registration, but with the possibility for making offers for the bids and receiving the participant's contact information.<br>
       <br>
-      The platform should be easy for users, without registration, but with the possibility to make offers for bids.<br>
-      <br>
-      Bets can only be accepted while the timer is running.
+      Bets can only be accepted while the timer is running. New bet must be higher than the previous one.
     </td>
  </tr>
 </table>
 <br>
-For easier placing new bets without registration, when user made his first bet - user data is stored in cookies. And when user will make new offer - user data are added to input fields from cookies:
+For easier placing new bets without registration - user data is stored in cookies while user had made his first bet. When user will make new bet - user data are added to input fields from cookies:
 <p align="center">
   <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/Auction/popup.png" width="600">
 </p>
